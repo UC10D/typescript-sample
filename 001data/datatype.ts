@@ -4,5 +4,5 @@
 
 // any
 let a: any;
-console.log(typeof (a));
+console.log("type is " + typeof (a));
 console.log(a);

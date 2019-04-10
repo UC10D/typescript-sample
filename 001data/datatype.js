@@ -1,8 +1,7 @@
+// 数据类型
 // typeof()
 // console.log()
-var a = null;
-console.log(typeof (a));
-console.log(a);
-a = 123;
+// any
+var a;
 console.log(typeof (a));
 console.log(a);
