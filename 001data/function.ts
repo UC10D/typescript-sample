@@ -30,6 +30,7 @@ console.log("buildName2 is " + buildName2(undefined,str2));
 
 console.log("----------------剩余参数-------------------------");
 function saveName(firstName: string, ...restOfName: string[]) {
+    console.log(" testStr " + restOfName.join(" "))
     return firstName + " " + restOfName.join(" ");
   }
   

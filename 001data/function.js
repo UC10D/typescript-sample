@@ -28,6 +28,7 @@ function saveName(firstName) {
     for (var _i = 1; _i < arguments.length; _i++) {
         restOfName[_i - 1] = arguments[_i];
     }
+    console.log(" testStr " + restOfName.join(" "));
     return firstName + " " + restOfName.join(" ");
 }
 var employeeName = saveName("Joseph", "Samuel", "Lucas", "MacKinzie");
