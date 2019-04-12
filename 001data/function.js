@@ -28,8 +28,22 @@ function saveName(firstName) {
     for (var _i = 1; _i < arguments.length; _i++) {
         restOfName[_i - 1] = arguments[_i];
     }
-    console.log(" testStr " + restOfName.join(" "));
+    // console.log(" testStr " + restOfName.join(" "))
+    console.log("saveName", restOfName[0]);
+    console.log("saveName", restOfName[1]);
     return firstName + " " + restOfName.join(" ");
 }
 var employeeName = saveName("Joseph", "Samuel", "Lucas", "MacKinzie");
+console.log("saveName", employeeName[0]);
+console.log("saveName", employeeName[1]);
 console.log(saveName(employeeName));
+function addNum(callback) {
+    callback && callback();
+}
+function call() {
+    console.log('i am call');
+}
+addNum(call);
+addNum(function () {
+    call();
+});
