@@ -71,3 +71,4 @@ if (str) {
 else {
     console.log("' ' is false");
 }
+// length 为0时 is false
