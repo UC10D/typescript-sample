@@ -15,3 +15,10 @@ class Greeter {
 let greeter = new Greeter("world");
 
 console.log(greeter.greet());
+
+console.log("-------------------------继承------------------------");
+class Animal {
+    move(distanceInMeters: number = 0) {
+
+    }
+}

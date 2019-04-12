@@ -37,12 +37,21 @@ console.log(saveName(employeeName));
 console.log("----------------回调函数-------------------------");
 function addNum(callback) {
     callback && callback();
+    if (callback) {
+        console.log('i am call' + callback);
+        callback();
+    }
+    else {
+        console.log('1i am call');
+    }
 }
-function call() {
-    console.log('i am call');
+function call(name) {
+    console.log('i am call' + name);
 }
-addNum(call);
+// addNum(call);
 // 一般用这种写法
-addNum(function () {
-    call();
-});
+// addNum(() => {
+//     // let a = "111";
+//     // call(a);
+// });
+addNum();
