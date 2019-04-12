@@ -2,10 +2,7 @@ console.log("----------------基础函数--------------------------");
 function add(x, y) {
     return x + y;
 }
-var myadd = function (x, y) { return x + y; };
 console.log("basic function is: " + add(1, 2));
-console.log("anonymous function is " + myadd);
-console.log("anonymous function is " + myadd(2, 3));
 console.log("----------------可选参数和默认参数-----------------");
 var str1 = "bob";
 var str2 = "wang";
@@ -29,14 +26,15 @@ function saveName(firstName) {
         restOfName[_i - 1] = arguments[_i];
     }
     // console.log(" testStr " + restOfName.join(" "))
-    console.log("saveName", restOfName[0]);
-    console.log("saveName", restOfName[1]);
+    console.log("saveName1", restOfName[0]);
+    console.log("saveName2", restOfName[1]);
     return firstName + " " + restOfName.join(" ");
 }
 var employeeName = saveName("Joseph", "Samuel", "Lucas", "MacKinzie");
-console.log("saveName", employeeName[0]);
-console.log("saveName", employeeName[1]);
+console.log("saveName3", employeeName[0]);
+console.log("saveName4", employeeName[1]);
 console.log(saveName(employeeName));
+console.log("----------------回调函数-------------------------");
 function addNum(callback) {
     callback && callback();
 }
@@ -44,6 +42,7 @@ function call() {
     console.log('i am call');
 }
 addNum(call);
+// 一般用这种写法
 addNum(function () {
     call();
 });
