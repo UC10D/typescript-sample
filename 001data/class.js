@@ -28,9 +28,9 @@ console.log("-------------------------继承------------------------");
 var Animal = /** @class */ (function () {
     function Animal() {
     }
-    Animal.prototype.move = function (distanceInMeters) {
-        if (distanceInMeters === void 0) { distanceInMeters = 0; }
-        console.log('Animal moved ${distanceInMeters}m.');
+    Animal.prototype.move = function (meters) {
+        if (meters === void 0) { meters = 0; }
+        return "Animal moved " + meters + "m.";
     };
     return Animal;
 }());
@@ -45,6 +45,44 @@ var Dog = /** @class */ (function (_super) {
     return Dog;
 }(Animal));
 var dog = new Dog();
-console.log(dog.move(10));
-console.log(dog.bark);
-console.log();
+console.log(dog.move());
+console.log(dog.bark());
+console.log("-------------------------复杂继承------------------------");
+var AnimalPlus = /** @class */ (function () {
+    function AnimalPlus(theName) {
+        this.name = theName;
+    }
+    AnimalPlus.prototype.move = function (meters) {
+        if (meters === void 0) { meters = 0; }
+        console.log(this.name + " moved " + meters + "m.");
+    };
+    return AnimalPlus;
+}());
+var Snake = /** @class */ (function (_super) {
+    __extends(Snake, _super);
+    function Snake(name) {
+        return _super.call(this, name) || this;
+    }
+    Snake.prototype.move = function (meters) {
+        if (meters === void 0) { meters = 35; }
+        console.log("Snake's name is " + this.name);
+        _super.prototype.move.call(this, meters);
+    };
+    return Snake;
+}(AnimalPlus));
+var Horse = /** @class */ (function (_super) {
+    __extends(Horse, _super);
+    function Horse(name) {
+        return _super.call(this, name) || this;
+    }
+    Horse.prototype.move = function (meters) {
+        if (meters === void 0) { meters = 45; }
+        console.log("Horse's name is " + this.name);
+        _super.prototype.move.call(this, meters);
+    };
+    return Horse;
+}(AnimalPlus));
+var sam = new Snake("sam");
+var tom = new Horse("tom");
+sam.move();
+tom.move(34);
