@@ -82,7 +82,50 @@ var Horse = /** @class */ (function (_super) {
     };
     return Horse;
 }(AnimalPlus));
+// 创建对象的两种写法
 var sam = new Snake("sam");
 var tom = new Horse("tom");
 sam.move();
 tom.move(34);
+console.log("-------------------------公共, 私有与受保护修饰符------------------------");
+// 理解protected
+console.log("-------------------------readonly修饰符 和 参数属性------------------------");
+var Octopus = /** @class */ (function () {
+    function Octopus(name) {
+        this.name = name;
+        //readonly name: string;  //声明时
+        this.numberOfLegs = 8;
+        //this.name = theName;  //构造函数里
+    }
+    return Octopus;
+}());
+var dad = new Octopus("bob");
+console.log(dad.name);
+// readonly属性必须在声明时或构造函数里被初始化.
+console.log("-------------------------取存器------------------------");
+var passcode = "123";
+var Employee = /** @class */ (function () {
+    function Employee() {
+    }
+    Object.defineProperty(Employee.prototype, "fullName", {
+        get: function () {
+            return this._fullName;
+        },
+        set: function (newName) {
+            if (passcode && passcode == "123") {
+                this._fullName = newName;
+            }
+            else {
+                console.log("Error");
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return Employee;
+}());
+var employee = new Employee();
+employee.fullName = "Bob Smith";
+if (employee.fullName) {
+    alert(employee.fullName);
+}
