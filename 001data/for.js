@@ -19,10 +19,30 @@ for (var _i = 0, testArray_1 = testArray; _i < testArray_1.length; _i++) {
 console.log("----------------forEach循环----------------------");
 testArray.forEach(function (value, index, array) {
     console.log("value: " + value + "  index: " + index);
-    console.log(array);
 });
 console.log("----------------every循环----------------------");
 testArray.every(function (value, index, array) {
     console.log("index：" + index + "--value：" + value);
     return false; //类似于break，跳出当前循环
+});
+console.log("----------------demo----------------------");
+var arr = [1, 2, 3, 4, 5];
+for (var i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+    if (arr[i] == 3) {
+        break;
+    }
+}
+for (var _a = 0, arr_1 = arr; _a < arr_1.length; _a++) {
+    var item = arr_1[_a];
+    console.log(item);
+    if (item == 3) {
+        break;
+    }
+}
+arr.forEach(function (value, index) {
+    console.log("value: " + value + "  index: " + index);
+    if (value == 3) {
+        return;
+    }
 });
