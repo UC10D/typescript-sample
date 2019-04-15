@@ -1,3 +1,4 @@
+"use strict";
 // for循环
 console.log("------------------for循环----------------------");
 var testArray = [20, "string", true, "hahaha"];

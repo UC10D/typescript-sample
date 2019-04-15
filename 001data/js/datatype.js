@@ -1,3 +1,4 @@
+"use strict";
 // 数据类型
 // undefined
 console.log("--------------------undefined----------------------------");

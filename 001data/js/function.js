@@ -1,3 +1,4 @@
+"use strict";
 console.log("----------------基础函数--------------------------");
 function add(x, y) {
     return x + y;
