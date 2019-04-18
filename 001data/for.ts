@@ -39,14 +39,22 @@ let arr = [1, 2, 3, 4, 5];
 
 for (let i = 0; i < arr.length; i++) {
     console.log(arr[i]);
-    if(arr[i] == 3) {
+    if (arr[i] == 3) {
         break;
+    }
+}
+
+for (let index in arr) {
+    console.log("index " + index);
+    console.log(typeof (index));
+    if (index == "1") {
+        console.log()
     }
 }
 
 for (let item of arr) {
     console.log(item);
-    if(item == 3) {
+    if (item == 3) {
         break;
     }
 }
@@ -58,3 +66,20 @@ arr.forEach((value, index) => {
     }
 });
 
+console.log("----------some---------");
+let list3 = [1, 2, 3, 4, 5, 6];
+list3.some((value, index) => {
+    if (value == 3) {
+        return true;
+    }
+    console.log(value);
+});
+
+console.log("--------every----------");
+list3.every((value, index) => {
+    if (value == 3) {
+        console.log("index: " + index);
+        return false;
+    }
+    console.log(value);
+});

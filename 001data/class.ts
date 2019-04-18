@@ -101,6 +101,3 @@ class Employee {
 
 let employee = new Employee();
 employee.fullName = "Bob Smith";
-if (employee.fullName) {
-    alert(employee.fullName);
-}
