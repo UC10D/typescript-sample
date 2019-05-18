@@ -67,19 +67,19 @@ arr.forEach((value, index) => {
 });
 
 console.log("----------some---------");
-let list3 = [1, 2, 3, 4, 5, 6];
-list3.some((value, index) => {
-    if (value == 3) {
-        return true;
-    }
-    console.log(value);
-});
+// let list3 = [1, 2, 3, 4, 5, 6];
+// list3.some((value, index) => {
+//     if (value == 3) {
+//         return true;
+//     }
+//     console.log(value);
+// });
 
-console.log("--------every----------");
-list3.every((value, index) => {
-    if (value == 3) {
-        console.log("index: " + index);
-        return false;
-    }
-    console.log(value);
-});
+// console.log("--------every----------");
+// list3.every((value, index) => {
+//     if (value == 3) {
+//         console.log("index: " + index);
+//         return false;
+//     }
+//     console.log(value);
+// });

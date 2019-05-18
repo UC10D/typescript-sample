@@ -105,28 +105,18 @@ console.log(dad.name);
 // readonly属性必须在声明时或构造函数里被初始化.
 console.log("-------------------------取存器------------------------");
 var passcode = "123";
-var Employee = /** @class */ (function () {
-    function Employee() {
-    }
-    Object.defineProperty(Employee.prototype, "fullName", {
-        get: function () {
-            return this._fullName;
-        },
-        set: function (newName) {
-            if (passcode && passcode == "123") {
-                this._fullName = newName;
-            }
-            else {
-                console.log("Error");
-            }
-        },
-        enumerable: true,
-        configurable: true
-    });
-    return Employee;
-}());
-var employee = new Employee();
-employee.fullName = "Bob Smith";
-if (employee.fullName) {
-    alert(employee.fullName);
-}
+// class Employee {
+//     private _fullName: string;
+//     get fullName():string {
+//         return this._fullName;
+//     }
+//     set fullName(newName: string) {
+//         if (passcode && passcode == "123") {
+//             this._fullName = newName;
+//         } else {
+//             console.log("Error");
+//         }
+//     }
+// }
+// let employee = new Employee();
+// employee.fullName = "Bob Smith";

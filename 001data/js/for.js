@@ -34,6 +34,13 @@ for (var i = 0; i < arr.length; i++) {
         break;
     }
 }
+for (var index in arr) {
+    console.log("index " + index);
+    console.log(typeof (index));
+    if (index == "1") {
+        console.log();
+    }
+}
 for (var _a = 0, arr_1 = arr; _a < arr_1.length; _a++) {
     var item = arr_1[_a];
     console.log(item);
@@ -47,3 +54,19 @@ arr.forEach(function (value, index) {
         return;
     }
 });
+console.log("----------some---------");
+// let list3 = [1, 2, 3, 4, 5, 6];
+// list3.some((value, index) => {
+//     if (value == 3) {
+//         return true;
+//     }
+//     console.log(value);
+// });
+// console.log("--------every----------");
+// list3.every((value, index) => {
+//     if (value == 3) {
+//         console.log("index: " + index);
+//         return false;
+//     }
+//     console.log(value);
+// });

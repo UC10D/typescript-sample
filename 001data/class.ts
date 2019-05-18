@@ -83,21 +83,21 @@ console.log(dad.name);
 console.log("-------------------------取存器------------------------");
 let passcode = "123"
 
-class Employee {
-    private _fullName: string;
+// class Employee {
+//     private _fullName: string;
 
-    get fullName():string {
-        return this._fullName;
-    }
+//     get fullName():string {
+//         return this._fullName;
+//     }
 
-    set fullName(newName: string) {
-        if (passcode && passcode == "123") {
-            this._fullName = newName;
-        } else {
-            console.log("Error");
-        }
-    }
-}
+//     set fullName(newName: string) {
+//         if (passcode && passcode == "123") {
+//             this._fullName = newName;
+//         } else {
+//             console.log("Error");
+//         }
+//     }
+// }
 
-let employee = new Employee();
-employee.fullName = "Bob Smith";
+// let employee = new Employee();
+// employee.fullName = "Bob Smith";
