@@ -73,3 +73,12 @@ else {
     console.log("' ' is false");
 }
 // length 为0时 is false
+console.log("--------------------array----------------------------");
+var list1 = [1, 2, 3];
+console.log("list = ", list1);
+console.log("type of list is ", typeof (list1)); // 数组的类型的object;
+var list2 = ['a', 'b', 'c']; // string类型的数组;
+console.log("list = ", list2);
+console.log("NO2 = ", list2[1]);
+var list3 = ['a', 2,];
+console.log("list = ", list3);

@@ -85,3 +85,16 @@ if (str) {
 }
 
 // length 为0时 is false
+
+
+console.log("--------------------array----------------------------");
+let list1: number[] = [1,2,3];
+console.log("list = ", list1);
+console.log("type of list is ", typeof(list1)); // 数组的类型的object;
+
+let list2: string[] = ['a','b','c']; // string类型的数组;
+console.log("list = ", list2);
+console.log("NO2 = ", list2[1]);
+
+let list3 :any[] = ['a',2,];
+console.log("list = ", list3);
